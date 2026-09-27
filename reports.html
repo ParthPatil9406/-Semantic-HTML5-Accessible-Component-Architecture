@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Accessible enterprise reports">
+  <title>Enterprise Dashboard | Reports</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<header class="site-header">
+  <a class="brand" href="index.html">Enterprise Dashboard</a>
+  <nav aria-label="Primary navigation"><ul><li><a href="index.html">Overview</a></li><li><a href="users.html">Users</a></li><li><a href="reports.html" aria-current="page">Reports</a></li></ul></nav>
+</header>
+<div class="layout">
+  <aside class="sidebar" aria-label="Dashboard sidebar"><h2>Workspace</h2><nav aria-label="Workspace navigation"><ul><li><a href="index.html">Dashboard</a></li><li><a href="users.html">Team members</a></li><li><a href="reports.html" aria-current="page">Reports</a></li></ul></nav></aside>
+  <main id="main-content" tabindex="-1">
+    <div class="page-heading"><div><p class="eyebrow">Workspace</p><h1>Reports</h1></div></div>
+    <section aria-labelledby="filters-heading">
+      <h2 id="filters-heading">Report filters</h2>
+      <form class="form-card">
+        <fieldset>
+          <legend>Filter reports</legend>
+          <div class="form-grid">
+            <div><label for="from-date">From date</label><input id="from-date" name="from-date" type="date"></div>
+            <div><label for="to-date">To date</label><input id="to-date" name="to-date" type="date"></div>
+            <div><label for="report-status">Status</label><select id="report-status" name="report-status"><option>All statuses</option><option>Ready</option><option>In review</option><option>Complete</option></select></div>
+          </div>
+        </fieldset>
+        <button class="button" type="submit">Apply filters</button>
+      </form>
+    </section>
+    <section aria-labelledby="reports-heading">
+      <h2 id="reports-heading">Available reports</h2>
+      <article class="card"><h3>Quarterly operations report</h3><p>Operational summary for the current quarter.</p><p><strong>Status:</strong> Ready</p><a class="button secondary" href="#download">View report</a></article>
+      <article class="card"><h3>User access review</h3><p>Review of current workspace access.</p><p><strong>Status:</strong> In review</p><a class="button secondary" href="#review">View report</a></article>
+    </section>
+  </main>
+</div>
+<footer class="site-footer"><p>&copy; 2026 Enterprise Dashboard</p><nav aria-label="Footer navigation"><ul><li><a href="accessibility.html">Accessibility</a></li><li><a href="contact.html">Support</a></li></ul></nav></footer>
+</body>
+</html>

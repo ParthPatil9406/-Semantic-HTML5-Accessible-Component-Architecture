@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Accessible enterprise dashboard home">
+  <title>Enterprise Dashboard | Overview</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<header class="site-header">
+  <a class="brand" href="index.html" aria-label="Enterprise Dashboard home">Enterprise Dashboard</a>
+  <nav aria-label="Primary navigation">
+    <ul>
+      <li><a href="index.html" aria-current="page">Overview</a></li>
+      <li><a href="users.html">Users</a></li>
+      <li><a href="reports.html">Reports</a></li>
+    </ul>
+  </nav>
+  <button class="icon-button" type="button" data-modal-open="profile-dialog" aria-haspopup="dialog">Profile</button>
+</header>
+
+<div class="layout">
+  <aside class="sidebar" aria-label="Dashboard sidebar">
+    <h2>Workspace</h2>
+    <nav aria-label="Workspace navigation">
+      <ul>
+        <li><a href="index.html" aria-current="page">Dashboard</a></li>
+        <li><a href="users.html">Team members</a></li>
+        <li><a href="reports.html">Reports</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main id="main-content" tabindex="-1">
+    <div class="page-heading">
+      <div>
+        <p class="eyebrow">Workspace</p>
+        <h1>Overview</h1>
+      </div>
+      <button class="button" type="button" data-modal-open="action-dialog">Create report</button>
+    </div>
+
+    <section aria-labelledby="summary-heading">
+      <h2 id="summary-heading">Summary</h2>
+      <div class="card-grid">
+        <article class="card">
+          <h3>Active users</h3>
+          <p class="metric">1,248</p>
+          <p>12% higher than last month.</p>
+        </article>
+        <article class="card">
+          <h3>Open reports</h3>
+          <p class="metric">36</p>
+          <p>8 reports require review.</p>
+        </article>
+        <article class="card">
+          <h3>System status</h3>
+          <p><span class="status status-good">Operational</span></p>
+          <p>All monitored services are available.</p>
+        </article>
+      </div>
+    </section>
+
+    <section aria-labelledby="activity-heading">
+      <h2 id="activity-heading">Recent activity</h2>
+      <div class="table-wrapper">
+        <table>
+          <caption>Recent dashboard activity</caption>
+          <thead>
+            <tr><th scope="col">Activity</th><th scope="col">Owner</th><th scope="col">Date</th><th scope="col">Status</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Quarterly report</th><td>Finance</td><td><time datetime="2026-09-27">27 Sep 2026</time></td><td>Ready</td></tr>
+            <tr><th scope="row">User access review</th><td>Security</td><td><time datetime="2026-09-26">26 Sep 2026</time></td><td>In review</td></tr>
+            <tr><th scope="row">Service audit</th><td>Operations</td><td><time datetime="2026-09-25">25 Sep 2026</time></td><td>Complete</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+</div>
+
+<footer class="site-footer">
+  <p>&copy; 2026 Enterprise Dashboard</p>
+  <nav aria-label="Footer navigation">
+    <ul><li><a href="accessibility.html">Accessibility</a></li><li><a href="contact.html">Support</a></li></ul>
+  </nav>
+</footer>
+
+<dialog id="profile-dialog" aria-labelledby="profile-title">
+  <form method="dialog">
+    <h2 id="profile-title">Profile</h2>
+    <p>Signed in as dashboard administrator.</p>
+    <button class="button" value="close">Close</button>
+  </form>
+</dialog>
+
+<dialog id="action-dialog" aria-labelledby="action-title">
+  <form method="dialog">
+    <h2 id="action-title">Create report</h2>
+    <p>Choose a report type to continue.</p>
+    <label for="report-type">Report type</label>
+    <select id="report-type" name="report-type" required>
+      <option value="">Select a type</option>
+      <option>Activity</option><option>Users</option><option>System status</option>
+    </select>
+    <div class="dialog-actions">
+      <button class="button" value="create">Create</button>
+      <button class="button secondary" value="cancel">Cancel</button>
+    </div>
+  </form>
+</dialog>
+<script src="js/app.js"></script>
+</body>
+</html>
